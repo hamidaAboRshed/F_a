@@ -12,7 +12,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                                 <div class="stat-text">$<span class="count">23569</span></div>
-                                <div class="stat-heading">Revenue</div>
+                                <div class="stat-heading">Costumer</div>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                                 <div class="stat-text"><span class="count">3435</span></div>
-                                <div class="stat-heading">Sales</div>
+                                <div class="stat-heading">Certificate PC</div>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                                 <div class="stat-text"><span class="count">349</span></div>
-                                <div class="stat-heading">Templates</div>
+                                <div class="stat-heading">Certificate SC</div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                                 <div class="stat-text"><span class="count">2986</span></div>
-                                <div class="stat-heading">Clients</div>
+                                <div class="stat-heading">Orders</div>
                             </div>
                         </div>
                     </div>
