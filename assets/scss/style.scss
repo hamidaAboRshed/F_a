@@ -38,7 +38,7 @@ p:focus {
 a, button {
     text-decoration: none;
     outline: none!important;
-    color: #e41616;
+    color: #878787;
  
     transition: all 0.25s ease;
 
@@ -318,7 +318,7 @@ aside.left-panel {
          padding-bottom: 50px;
     }
     .menu-title {
-        color: #bed10e;
+        color: #41434d;
         clear: both;
         display: block;
         font-family: 'Open Sans';
@@ -363,7 +363,7 @@ aside.left-panel {
                     color: $menu-active ;
                 }
                 .menu-icon {
-                    color: #003c71 !important;
+                    color: $menu-color;
                     float: left;
                     margin-top: 8px;
                     width: 55px;
@@ -413,7 +413,7 @@ aside.left-panel {
                         position: relative;
                     }
                     i {
-                        color: #cecdc8;
+                        color: #c8c9ce;
                         float: left;
                         padding: 0;
                         position: absolute;

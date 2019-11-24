@@ -25,6 +25,15 @@
     <link href="<?php echo base_url()?>assets/icons/weather-icons/css/weather-icons.min.css" rel="stylesheet" />
     <link href="<?php echo base_url()?>assets/css/fullcalendar.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+    
+    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/buttons.bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/buttons.dataTables.min.css">
+  
+
+
    <style>
     #weatherWidget .currentDesc {
         color: #ffffff!important;

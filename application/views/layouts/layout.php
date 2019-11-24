@@ -58,6 +58,19 @@
     <script src="<?php echo base_url()?>assets/js/javaScript/fullcalendar.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/init/fullcalendar-init.js"></script>
 
+    <!--Last add by me-->
+   
+    <script src="http://localhost:8081/F_a/assets/js/lib/datatables/datatables.min.js"></script>
+
+    
+    <script src="http://localhost:8081/F_a/assets/js/lib/datatables/buttons.colVis.min.js"></script>
+    <script src="http://localhost:8081/F_a/assets/js/lib/datatables/buttons.flash.min.js"></script>
+    <script src="http://localhost:8081/F_a/assets/js/lib/datatables/buttons.html5.min.js"></script>
+    <script src="http://localhost:8081/F_a/assets/js/lib/datatables/buttons.print.min.js"></script>
+    
+ <!--   <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/v4-shims.js"></script>-->
+
     <!--Local Stuff-->
     <script>
         jQuery(document).ready(function($) {
