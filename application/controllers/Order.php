@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Controller{
 
-    public function orderF()
+    public function orders()
 	{
 		$data=array("title"=>"Home page",
 			"sub_view" =>"order.php"
