@@ -3,7 +3,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $title?></title>
     <meta name="description" content="FAHESWebApplication">
-    <meta name="author" content="HamidaAboRshed">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="<?php echo base_url();?>/assets/images/logo/favicon.png">
@@ -25,12 +24,13 @@
     <link href="<?php echo base_url()?>assets/icons/weather-icons/css/weather-icons.min.css" rel="stylesheet" />
     <link href="<?php echo base_url()?>assets/css/fullcalendar.min.css" rel="stylesheet" />
 
+    <!-- dataTable -->
+    <link href="<?php echo base_url()?>assets/css/lib/datatable/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url()?>assets/css/lib/datatable/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url()?>assets/css/lib/datatable/buttons.dataTables.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
-    
-    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/buttons.bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost:8081/F_a/assets/css/lib/datatable/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
   
 
 

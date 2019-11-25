@@ -51,7 +51,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                             <div class="stat-text"><span class="count">3435</span></div>
-                                <div class="stat-heading">P Certificate</div>
+                                <div class="stat-heading">PC</div>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                         <div class="stat-content">
                             <div class="text-left dib">
                                 <div class="stat-text"><span class="count">349</span></div>
-                                <div class="stat-heading">S Certificate</div>
+                                <div class="stat-heading">SC</div>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
     <!-- Orders -->
     <div class="orders">
         <div class="row">
-            <div class="col-xl-8">
+            <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="box-title">Orders </h4>
