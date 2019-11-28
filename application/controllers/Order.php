@@ -5,8 +5,8 @@ class Order extends CI_Controller{
 
     public function index()
 	{
-		$data=array("title"=>"Home page",
-			"sub_view" =>"order.php"
+		$data=array("pageTitle"=>"Home page",
+			"subview" =>"order.php"
 		);
 		$this->load->view('layouts/layout.php',$data);
 	}

@@ -5,8 +5,8 @@ class DashBoard extends CI_Controller{
 
     public function DashF()
 	{
-		$data=array("title"=>"Dash page",
-			"sub_view" =>"DashBoard.php"
+		$data=array("pageTitle"=>"Dash page",
+			"subview" =>"DashBoard.php"
 		);
         $this->load->view('layouts/layout.php',$data);
     }

@@ -5,14 +5,10 @@ class Customer extends CI_Controller{
 
     public function index()
 	{
-		$data=array("title"=>"Home page",
-			"sub_view" =>"custom.php"
+		$data=array("pageTitle"=>"Home page",
+			"subview" =>"custom.php"
 		);
 		$this->load->view('layouts/layout.php',$data);
-		// $data=array("title"=>"Home page",
-		// 	"sub_view" =>"Home.php"
-		// );
-		// $this->load->view('layouts/layout2.php',$data);
 	}
 	
 

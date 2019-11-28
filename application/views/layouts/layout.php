@@ -5,6 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <?php $this->load->view('includes/header');?>
 <body>
+    <!--<script src="https://code.jquery.com/jquery-3.4.0.js"></script>-->
+    <script src="<?php echo base_url();?>/assets/js/javaScript/jquery-3.4.1.min.js"></script>
+    <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/javaScript/jquery.matchHeight.min.js"></script>
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <?php $this->load->view('includes/left_panel');?>
@@ -17,7 +25,7 @@
         <!-- /#header -->
         <!-- Content -->
         <div class="content">
-            <?php $this->load->view($sub_view);?>
+            <?php $this->load->view($subview);?>
         </div>
         <!-- /.content -->
         <div class="clearfix"></div>
@@ -27,17 +35,7 @@
     </div>
     <!-- /#right-panel -->
 
-
-    <!--<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>-->
-
     <!-- Scripts -->
-    <script src="<?php echo base_url()?>assets/js/lib/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/javaScript/popper.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/javaScript/bootstrap.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/javaScript/jquery.matchHeight.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/main.js"></script>
 
     <!--  Chart js -->
@@ -60,8 +58,8 @@
 
     <!--Last add by me-->
    
-    <script src="<?php echo base_url()?>assets/js/lib/datatables/datatables.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/init/datatables-init.js"></script>
+<!--    <script src="<?php echo base_url()?>assets/js/lib/datatables/datatables.min.js"></script>
+    <script src="<?php echo base_url()?>assets/js/init/datatables-init.js"></script>-->
 
  <!--   <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/v4-shims.js"></script>-->

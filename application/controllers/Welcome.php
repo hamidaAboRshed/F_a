@@ -20,8 +20,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data=array("title"=>"Home page",
-			"sub_view" =>"Home.php"
+		$data=array("pageTitle"=>"Home page",
+			"subview" =>"Home.php"
 		);
 		$this->load->view('layouts/layout.php',$data);
 	}
