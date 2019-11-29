@@ -26,7 +26,7 @@
                 <div class="card-body">
                     <div class="stat-widget-five">
                         <div class="stat-icon dib flat-color-1">
-                        <i class="fas fa-border-all"></i>
+                        <i class="fas fa-money-check-alt"></i>
                         </div>
 
                         
@@ -46,7 +46,7 @@
                 <div class="card-body">
                     <div class="stat-widget-five">
                         <div class="stat-icon dib flat-color-2">
-                        <i class="menu-icon fas fa-certificate"></i>
+                        <i class="menu-icon fas fa-award"></i>
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
@@ -64,7 +64,7 @@
                 <div class="card-body">
                     <div class="stat-widget-five">
                         <div class="stat-icon dib flat-color-3">
-                        <i class="menu-icon fas fa-award"></i>
+                        <i class="fas fa-cart-plus"></i>
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">

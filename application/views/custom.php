@@ -14,7 +14,6 @@
                                 <thead>
                                     <tr>
                                         <th>Customer Name</th>
-                                       
                                         <th>Email</th>
                                         <th>CR</th>
                                         <th>State</th>

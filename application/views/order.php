@@ -57,8 +57,6 @@
                                             <td><button type="button" class="btn btn-outline-secondary btn-sm">New Payment</button></td>
                                         </tr>
                                        
-                                      
-                                 
                                     </tbody>
                                 </table>
                             </div>
