@@ -116,7 +116,7 @@
             <?php echo form_open('Role/update_role_permissions', $attributes = array('id' => 'RolePermissionsForm')); ?>
             <div class="modal-body">
 
-                <div class="row">
+               <!-- <div class="row">
                 <?php foreach ($permissions as $permission){?>
                     <div class="col-xs-4">
                         <div class="form-group">
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                     <?php }?>
-                </div>
+                </div>-->
               
                 <input type="hidden" id="role_id" name="role_id">
                 <div class="modal-footer">

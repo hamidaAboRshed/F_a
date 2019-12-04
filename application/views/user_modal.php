@@ -7,7 +7,7 @@
                 <h4 class="modal-title">Reset password </h4>
             </div>
 
-            <?php echo form_open('Users/reset_password', $attributes = array('id' => 'ResetUserPaswordForm')); ?>
+            <?php echo form_open('User/reset_password', $attributes = array('id' => 'ResetUserPaswordForm')); ?>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-xs-6">
@@ -44,7 +44,7 @@
                 <h4 class="modal-title">User Roles</h4>
             </div>
 
-            <?php echo form_open('Users/update_user_roles', $attributes = array('id' => 'UserRolesForm')); ?>
+            <?php echo form_open('User/update_user_roles', $attributes = array('id' => 'UserRolesForm')); ?>
             <div class="modal-body">
 
                 <div class="row">

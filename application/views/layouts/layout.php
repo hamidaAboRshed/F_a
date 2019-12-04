@@ -10,8 +10,8 @@
     <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/lib/bootstrap/js/popper.min.js"></script>
-    <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="<?php echo base_url()?>assets/js/javaScript/jquery.matchHeight.min.js"></script>
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
@@ -58,7 +58,7 @@
 
     <!--Last add by me-->
    
-<!--    <script src="<?php echo base_url()?>assets/js/lib/datatables/datatables.min.js"></script>
+    <!--<script src="<?php echo base_url()?>assets/js/lib/datatables/datatables.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/init/datatables-init.js"></script>-->
 
  <!--   <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>

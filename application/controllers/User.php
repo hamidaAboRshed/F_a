@@ -27,7 +27,7 @@ class User extends CI_Controller {
         if($_POST) {
             $data = $this->auth->login($_POST);
         }
-
+ 
         return $this->auth->showLoginForm($data);
     }
 
@@ -37,14 +37,14 @@ class User extends CI_Controller {
     public function logout()
     {
         if($this->auth->logout())
-            return redirect('Users/login');
+            return redirect('User/login');
 
         return false;
     }
     public function index () {
         if (!can(['user_view'])) {
 			$this->session->set_userdata('error', 'you dont have permission to do that');
-			redirect('Welcome/index');
+			//redirect('Welcome/index');
 		}
         $data['output'] = '';
         $array = array();
@@ -59,9 +59,9 @@ class User extends CI_Controller {
             'Options'
         );
 
-        $array['read_action'] = '../User/fetchUsersData/';
+        $array['read_action'] = './User/fetchUsersData/';
 
-        $array['custom_modal_file'] = "modal/user_modal";
+        $array['custom_modal_file'] = "user_modal.php";
         $array['custom_modal_data'] = $data;
 
         $data['grid_body_data'] = $array;
@@ -75,8 +75,6 @@ class User extends CI_Controller {
     public function fetchUsersData() {
         
         $result = array('data' => array());
-
-        $default_language = $this->Index_model->get_default_language();
         $users = $this->User_model->all();
         foreach($users as $key=>$value)
         {

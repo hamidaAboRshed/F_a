@@ -22,13 +22,12 @@ class Role extends CI_Controller
             'status ',
             'created_at',
             'updated_at',
-            'deleted_at',
             'Options'
         );
 
-        $array['read_action'] = '../Role/fetchRolesData/';
+        $array['read_action'] = './Role/fetchRolesData/';
 
-        $array['custom_modal_file'] = "modal/role_grid";
+        $array['custom_modal_file'] = "role_grid";
         $array['custom_modal_data'] = $data;
 
         $data['grid_body_data'] = $array;
@@ -36,10 +35,10 @@ class Role extends CI_Controller
         $data['permissions']=$this->get_permissions();
  
         // add breadcrumbs
-        $this->breadcrumbs->push('Roles', '/Role/index');
+        //$this->breadcrumbs->push('Roles', '/Role/index');
 
         // output
-        $data['breadcrumb'] = $this->breadcrumbs->show();
+       // $data['breadcrumb'] = $this->breadcrumbs->show();
         $data['pageTitle'] = 'Roles Table';
         $this->load->view('layouts/layout', $data);
     }
@@ -49,8 +48,6 @@ class Role extends CI_Controller
         $result = array('data' => array());
 
         $data = $this->Role_model->get_all();
-
-        $default_language = $this->Index_model->get_default_language();
 
         foreach ($data as $key => $value) {
 
@@ -79,7 +76,6 @@ class Role extends CI_Controller
                 $value['status'] == 1 ? 'active' : 'not active',
                 $value['created_at'],
                 $value['updated_at'],
-                $value['deleted_at'],
                 $buttons
             );
         }

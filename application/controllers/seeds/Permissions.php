@@ -1,6 +1,5 @@
 <?php
-require_once(APPPATH . 'core/Rafeed_controller.php');
-class Permissions extends Rafeed_Controller {
+class Permissions extends CI_Controller {
 
     public function create_permissions_table()
     {

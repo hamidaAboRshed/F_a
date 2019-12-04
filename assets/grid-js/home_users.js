@@ -128,7 +128,7 @@ function  update_user_roles(id) {
 
     $('#UserUpdateRolesModal #user_id').val(id);
     $.ajax({
-        url: "../Users/get_user_roles?id="+id,
+        url: "../User/get_user_roles?id="+id,
         type: "get",
         processData: false,
         contentType: false,

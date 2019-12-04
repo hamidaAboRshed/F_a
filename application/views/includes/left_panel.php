@@ -7,22 +7,22 @@
             <li class="menu-title">Administrator</li><!-- /.menu-title -->
 
 <li class="">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fas fa-users-cog"></i>Employee</a>
+    <a href="<?php echo site_url('Employee')?>"><i class="menu-icon fas fa-users-cog"></i>Employee</a>
   
 </li>
 
 <li class="">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fas fa-users"></i>User</a>
+    <a href="<?php echo site_url('User')?>"><i class="menu-icon fas fa-users"></i>User</a>
    
 </li>
 
 <li class="">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fas fa-user-tag"></i>Roles</a>
+    <a href="<?php echo site_url('Role')?>"><i class="menu-icon fas fa-user-tag"></i>Roles</a>
     
 </li>
 
 <li class="">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Regulation</a>
+                <a href="<?php echo site_url('Regulation')?>"> <i class="menu-icon fa fa-tasks"></i>Regulation</a>
                
             </li>
 
@@ -82,8 +82,7 @@
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
                 <ul class="sub-menu children dropdown-menu">
-                    <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo site_url('Login/Log_page');?>">Login</a></li>
-                    <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo site_url('Register/Register_page');?>">Register</a></li>
+                    <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo site_url('User/login');?>">Login</a></li>
                     <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
                 </ul>
             </li>

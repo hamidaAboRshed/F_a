@@ -197,7 +197,7 @@ class User_model extends CI_Model {
     {
         $data['deleted_at'] = date("Y-m-d H:i:s");
 
-        return $this->find($id) ? $this->db->update('users', $data, array('id' => $id)) : 0;
+        return $this->find($id) ? $this->db->update('user', $data, array('id' => $id)) : 0;
     }
 
     /**

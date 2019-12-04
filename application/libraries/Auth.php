@@ -60,6 +60,7 @@ class Auth
         return;
     }
 
+
     /**
      * Show The Login Form
      *
@@ -203,7 +204,7 @@ class Auth
     public function authenticate()
     {
         if (!$this->loginStatus()) {
-            return redirect('Users/login');
+            return redirect('User/login');
         }
 
         return true;

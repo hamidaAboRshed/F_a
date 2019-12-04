@@ -8,7 +8,7 @@
         			else
         				$this->load->view('grid/grid_body', $grid_body_data);
         			}
-        			else 
+					else 
         				$this->load->view('grid/grid_body', $grid_body_data);
         		?>
 
