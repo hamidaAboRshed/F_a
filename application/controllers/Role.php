@@ -60,8 +60,8 @@ class Role extends CI_Controller
                 <ul class="dropdown-menu">';
                 if(can(['role_edit']))
                 {
-                    $buttons.='<li><a type="button" class="" onclick="update_role_modal('.$value['id'].')" data-toggle="modal" data-target="#editRoleModal">Edit</a></li>'
-                    .'<li><a type="button" class="" onclick="update_role_permissions('.$value['id'].')" data-toggle="modal" data-target="#RoleUpdatePermissionModal">Permissions</a></li>';
+                    $buttons.='<li><a type="button" class="" onclick="update_role_modal('.$value['ID'].')" data-toggle="modal" data-target="#editRoleModal">Edit</a></li>'
+                    .'<li><a type="button" class="" onclick="update_role_permissions('.$value['ID'].')" data-toggle="modal" data-target="#RoleUpdatePermissionModal">Permissions</a></li>';
                 }
 
                 $buttons.='</ul>

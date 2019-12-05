@@ -55,7 +55,6 @@ class User extends CI_Controller {
             'Type',
             'created_at',
             'updated_at',
-            'deleted_at',
             'Options'
         );
 
@@ -105,7 +104,6 @@ class User extends CI_Controller {
                      $value['EmployeeID']==null?($value['CustomerID']==null?' ':'Customer'):'Employee',
                      $value['created_at'],
                      $value['updated_at'],
-                     $value['deleted_at'],
                      $buttons
                  );
         }

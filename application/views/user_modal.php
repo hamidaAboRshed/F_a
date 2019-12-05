@@ -74,4 +74,4 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
-<script src="<?php echo base_url()?>assets/grid-js/home_users.js">
+<script src="<?php echo base_url()?>assets/grid-js/home_users.js"></script>
