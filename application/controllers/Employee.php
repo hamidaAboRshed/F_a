@@ -45,27 +45,19 @@ class Employee extends CI_Controller {
 			// button
 			$buttons = '
 				<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Action <span class="caret"></span>
 				</button>
-					<ul class="dropdown-menu">';
-					//if(can(['employee_edit']))
-					{
-						$buttons.='<li><a type="button" class="" onclick="EditEmployee('.$value['ID'].')" data-toggle="modal" data-target="#EditEmployeeModal">Edit</a></li>';
-					}
-					//if(can(['employee_view']))
-					{
-						$buttons.='<li><a type="button" class="" onclick="ViewEmployee('.$value['ID'].')" data-toggle="modal" data-target="#ViewEmployeeModal">View</a></li>';
-					}
-					//if(can(['user_create']))
-					{
-						$buttons.='<li><a type="button" href="./User/create_user/'.$value['ID'].'" >Create account</a></li>';
-					}
-					
-					$buttons .= '
-				</ul>
-				</div>
-				';
+
+				<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button" onclick="EditEmployee('.$value['ID'].')" data-toggle="modal" data-target="#EditEmployeeModal">Edit</button>
+                  <button class="dropdown-item" type="button" onclick="ViewEmployee('.$value['ID'].')" data-toggle="modal" data-target="#ViewEmployeeModal">View</button>
+                  <button class="dropdown-item" type="button" href="./User/create_user/'.$value['ID'].'" >Create account</button>
+                  </button>
+                  </div>
+              </div> 
+                          ';
+				
 			$result['data'][$key] = array(
 				$value['FirstName'],
 				$value['LastName'],

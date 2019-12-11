@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/icons/flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+
      <script type="text/javascript" src="<?php echo base_url()?>assets/js/javaScript/html5shiv.min.js"></script> 
+     
+     <script type="text/javascript" src="<?php echo base_url()?>assets/DataTables/Buttons-1.6.1/js/datatables.min.js"></script> 
+
     <link href="<?php echo base_url()?>assets/css/chartist.min.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/jqvmap.min.css" rel="stylesheet">
 
@@ -27,12 +31,19 @@
     <link href="<?php echo base_url()?>assets/css/fullcalendar.min.css" rel="stylesheet" />
 
     <!-- dataTable -->
-   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/datatables.min.css"></link>
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/datatables.min.css"></link>-->
+   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.bootstrap.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.bootstrap4.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.dataTables.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.jqueryui.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.foundation.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.semanticui.min.css"></link>
 
+ 
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/datatables.min.css"></link>
+
+
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
   

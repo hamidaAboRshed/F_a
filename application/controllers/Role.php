@@ -53,19 +53,15 @@ class Role extends CI_Controller
 
             // button
             $buttons = '
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Action <span class="caret"></span>
-			  </button>
-                <ul class="dropdown-menu">';
-                if(can(['role_edit']))
-                {
-                    $buttons.='<li><a type="button" class="" onclick="update_role_modal('.$value['ID'].')" data-toggle="modal" data-target="#editRoleModal">Edit</a></li>'
-                    .'<li><a type="button" class="" onclick="update_role_permissions('.$value['ID'].')" data-toggle="modal" data-target="#RoleUpdatePermissionModal">Permissions</a></li>';
-                }
-
-                $buttons.='</ul>
-			</div>
+            <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" onclick="update_role_modal('.$value['ID'].')" data-toggle="modal" data-target="#editRoleModal">Edit</button>
+    <button class="dropdown-item" type="button" onclick="update_role_permissions('.$value['ID'].')" data-toggle="modal" data-target="#RoleUpdatePermissionModal">Permissions</button>
+  </div>
+</div> 
 			';
 
 

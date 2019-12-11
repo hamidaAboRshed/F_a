@@ -151,7 +151,7 @@
 
 
 
-<div class="modal fade" role="dialog" id="ViewEmployeeModal">
+<div class="modal fade" role="dialog" id="ViewCustomerModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -181,7 +181,7 @@
 <script type="text/javascript">
   
   $(document).ready(function() {
-      $('#button-action').append('<a class="btn btn-default pull pull-right" data-toggle="modal" data-target="#AddEmployeeModal" onclick="addEmployee()">Add </a>');
+      $('#button-action').append('<a class="btn btn-warning pull pull-right" data-toggle="modal" data-target="#AddEmployeeModal" onclick="addEmployee()">Add </a>');
   });
 </script>
 <?php //}?>

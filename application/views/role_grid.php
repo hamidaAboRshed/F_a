@@ -104,7 +104,8 @@
     </div><!-- /.modal -->
 </div>
 
-
+&nbsp;
+<br/>
 <div class="modal fade" role="dialog" id="RoleUpdatePermissionModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -116,20 +117,20 @@
             <?php echo form_open('Role/update_role_permissions', $attributes = array('id' => 'RolePermissionsForm')); ?>
             <div class="modal-body">
 
-               <!-- <div class="row">
+               <div class="row">
                 <?php foreach ($permissions as $permission){?>
                     <div class="col-xs-4">
                         <div class="form-group">
-                            <?php echo form_label($permission->name, 'permission'.$permission->id, $attributes = array()); ?>
-                            <input type="checkbox" name=<?php echo $permission->id?> value=<?php echo $permission->id?> id=<?php echo$permission->id?>>
+                            <?php echo form_label($permission->name, 'permission'.$permission->ID, $attributes = array()); ?>
+                            <input type="checkbox" name=<?php echo $permission->ID?> value=<?php echo $permission->ID?> id=<?php echo$permission->ID?>>
                         </div>
                     </div>
                     <?php }?>
-                </div>-->
+                </div>
               
                 <input type="hidden" id="role_id" name="role_id">
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     <?php echo form_submit('submit', 'change', array("class" => "btn btn-primary", "id" => "submit")); ?>
                 </div>
                 <?php echo form_close() ?>
@@ -138,11 +139,11 @@
     </div><!-- /.modal -->
 </div>
 <script src="<?php echo base_url()?>assets/grid-js/home_role.js"></script>
-<?php if(can(['role_add'])){?>
+<?php// if(can(['role_add'])){?>
 <script type="text/javascript">
   
   $(document).ready(function() {
-      $('#button-action').append('<a class="btn btn-default pull pull-right" data-toggle="modal" data-target="#addRoleModal" onclick="addRoleModal()">Add </a>');
+      $('#button-action').append('<a class="btn btn-warning pull pull-right" data-toggle="modal" data-target="#addRoleModal" onclick="addRoleModal()">Add </a>');
   });
 </script>
-<?php }?>
+<?php //}?>

@@ -77,25 +77,21 @@ class User extends CI_Controller {
         $users = $this->User_model->all();
         foreach($users as $key=>$value)
         {
-                 // button
-                 $buttons = '
-                 <div class="btn-group">
-                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Action <span class="caret"></span>
-                   </button>
-                     <ul class="dropdown-menu">';
-                     if(can(['user_edit']))
-                     {
-                         $buttons.='<li><a type="button" class="" onclick="Reset_Password('.$value['ID'].')" data-toggle="modal" data-target="#ResetPasswordModal">Reset Password</a></li>'
-                         .'<li><a type="button" class="" onclick="change_status('.$value['ID'].')">Change Status</a></li>'
-                         .'<li><a type="button" class="" onclick="update_user_roles('.$value['ID'].')" data-toggle="modal" data-target="#UserUpdateRolesModal">Set roles</a></li>';
-                     }
-               
-                     $buttons.='</ul>
-                 </div>
-                 ';
-     
-     
+                //  button
+                $buttons = '
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Action
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button" onclick="Reset_Password('.$value['ID'].')" data-toggle="modal" data-target="#ResetPasswordModal">Reset Passwor</button>
+                  <button class="dropdown-item" type="button" onclick="change_status('.$value['ID'].')">Change Status</button>
+                  <button class="dropdown-item" type="button" onclick="update_user_roles('.$value['ID'].')" data-toggle="modal" data-target="#UserUpdateRolesModal">Set roles
+                  </button>
+                  </div>
+              </div> 
+                          ';
+
             
                  $result['data'][$key] = array(
                      ($value['CustomerID']!=null?$this->get_customer_name($value['CustomerID']):($value['EmployeeID']!=null?$this->get_employee_name( $value['EmployeeID']):NULL)),
