@@ -21,7 +21,7 @@ class Regulation extends CI_Controller{
                 'Hs_code',
                 'Technical_regulation',
                 'Category_name',
-                'Scheme '
+                'Schema'
                // 'qm'
             );
     

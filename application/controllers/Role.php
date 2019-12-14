@@ -148,9 +148,9 @@ class Role extends CI_Controller
         else 
         {
             $data = array(
-                "name"=>$this->input->post('RoleName'),
-                "display_name"=>$this->input->post('DisplayName'),
-                "description"=>$this->input->post('Description'),
+                "RoleName"=>$this->input->post('name'),
+                "DisplayName"=>$this->input->post('display_name'),
+                "Description"=>$this->input->post('description'),
                 "status"=>$this->input->post('status'),
                 "created_at"=>date('Y-m-d H:i:s'),
                 "id"=>$this->input->post("id")
@@ -188,7 +188,7 @@ class Role extends CI_Controller
         foreach($permissions as $key=>$value)
         {
           
-            if($this->input->post($value->id))
+            if($this->input->post($value->ID))
             {
                 
                 $role_permissions[$key]['role_id']=$role_id;

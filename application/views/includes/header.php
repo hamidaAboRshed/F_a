@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/icons/flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-
+<!-- 
      <script type="text/javascript" src="<?php echo base_url()?>assets/js/javaScript/html5shiv.min.js"></script> 
      
-     <script type="text/javascript" src="<?php echo base_url()?>assets/DataTables/Buttons-1.6.1/js/datatables.min.js"></script> 
+     <script type="text/javascript" src="<?php echo base_url()?>assets/DataTables/Buttons-1.6.1/js/datatables.min.js"></script>  -->
 
     <link href="<?php echo base_url()?>assets/css/chartist.min.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/jqvmap.min.css" rel="stylesheet">

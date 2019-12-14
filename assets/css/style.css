@@ -1073,10 +1073,10 @@ header .form-inline {
   .user-area .dropdown-toggle.active:before {
     background: #49a342; }
 
-.dropdown-menu {
+/* .dropdown-menu {
   border-radius: 0;
   -webkit-transform: none !important;
-          transform: none !important; }
+          transform: none !important; } */
 
 .for-notification .dropdown-menu .dropdown-item {
   padding: 5px 15px !important;

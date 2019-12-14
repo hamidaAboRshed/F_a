@@ -9,55 +9,56 @@
             <?php echo form_open_multipart('employee/add_employee', $attributes = array('id' => 'AddEmployee')); ?>
             <div class="modal-body">
                 <div class="row">
+                &nbsp;&nbsp;&nbsp;&nbsp;<div class="col-xs-6">
+                       <div class="form-group">
+                       &nbsp;<?php echo form_label('First name', 'firts_name', $attributes = array()); ?><span class="color-red" >*</span>
+                            &nbsp;  <?php echo form_input('first_name', set_value('first_name'), $attributes = array('class' => "form-control", "id" => "first_name")); ?>
+                        </div> 
+                    </div>&nbsp;&nbsp;&nbsp;
+
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label('First name', 'firts_name', $attributes = array()); ?>
-                            <?php echo form_input('first_name', set_value('first_name'), $attributes = array('class' => "form-control", "id" => "first_name")); ?>
-                        </div>
-                    </div>
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <?php echo form_label('Last Name', 'last_name', $attributes = array()); ?>
+                            <?php echo form_label('Last Name', 'last_name', $attributes = array()); ?><span class="color-red" >*</span>
                             <?php echo form_input('last_name', set_value('last_name'), $attributes = array('class' => "form-control", "id" => "last_name")); ?>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-6">
-                        <?php echo form_label('Father name', 'father_name', $attributes = array()); ?>
-                        <?php echo form_input('father_name', set_value('father_name'), $attributes = array('class' => "form-control", "id" => "father_name")); ?>
-                    </div>
-
-                    <div class="col-xs-6">
-                        <?php echo form_label('address', 'address', $attributes = array()); ?>
+                      &nbsp;&nbsp;&nbsp;&nbsp;<div class="col-xs-6">
+                        <?php echo form_label('Address', 'address', $attributes = array()); ?>
                         <?php echo form_input('address', set_value('address'), $attributes = array('class' => "form-control", "id" => "address")); ?>
                     </div>
-                </div>
+                </div>&nbsp;&nbsp;&nbsp;
+
                 <div class="row">
-                    <div class="col-xs-6">
-                        <?php echo form_label('gender', 'gender', $attributes = array()); ?>
+                &nbsp;&nbsp;&nbsp;&nbsp; <div class="col-xs-6">
+                        <?php echo form_label('Gender', 'gender', $attributes = array()); ?><span class="color-red" >*</span>
                         <select name="gender" id="gender" class="form-control">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
-                    </div>
-
+                    </div>&nbsp;&nbsp;&nbsp;
+    
                     <div class="col-xs-6">
                         <?php echo form_label('Birthday', 'birthday', $attributes = array()); ?>
                         <input type="date" name="biryhday" id="birthday" class="form-control">
                     </div>
-                    <div class="col-xs-6">
-                        <?php echo form_label('Email', 'email', $attributes = array()); ?>
-                        <?php echo form_input('email', set_value('email'), $attributes = array('class' => "form-control", "id" => "email")); ?>
-                    </div>
-                    <div class="col-xs-6">
-                        <?php echo form_label('Mobile Phone', 'mobile', $attributes = array()); ?>
-                        <?php echo form_input('mobile', set_value('mobile'), $attributes = array('class' => "form-control", "id" => "mobile")); ?>
-                    </div>
-                </div>
+                </div>&nbsp;&nbsp;&nbsp;
+
                 <div class="row">
+                &nbsp;&nbsp;&nbsp;&nbsp;<div class="col-xs-6">
+                        <?php echo form_label('Email', 'email', $attributes = array()); ?><span class="color-red" >*</span>
+                        <?php echo form_input('email', set_value('email'), $attributes = array('class' => "form-control", "id" => "email")); ?>
+                    </div>&nbsp;&nbsp;&nbsp;
                     <div class="col-xs-6">
+                        <?php echo form_label('Mobile Phone', 'mobile_phone', $attributes = array()); ?>
+                        <?php echo form_input('mobile_phone', set_value('mobile_phone'), $attributes = array('class' => "form-control", "id" => "mobile_phone")); ?>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;
+
+                <div class="row">
+                &nbsp;&nbsp;&nbsp;&nbsp; <div class="col-xs-6">
                         <?php echo form_label('Photo', 'photo', $attributes = array()); ?>
                         <input type="file" name="photo" class="file" accept='image/png,image/jpeg,image/jpg,image/gif'>
                     </div>
@@ -86,33 +87,30 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label('First name', 'firts_name', $attributes = array()); ?>
+                            <?php echo form_label('First name', 'firts_name', $attributes = array()); ?><span class="color-red" >*</span>
                             <?php echo form_input('first_name', set_value('first_name'), $attributes = array('class' => "form-control", "id" => "first_name")); ?>
+                           
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label('Last Name', 'last_name', $attributes = array()); ?>
+                            <?php echo form_label('Last Name', 'last_name', $attributes = array()); ?><span class="color-red" >*</span>
                             <?php echo form_input('last_name', set_value('last_name'), $attributes = array('class' => "form-control", "id" => "last_name")); ?>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
+                   
                     <div class="col-xs-6">
-                        <?php echo form_label('Father name', 'father_name', $attributes = array()); ?>
-                        <?php echo form_input('father_name', set_value('father_name'), $attributes = array('class' => "form-control", "id" => "father_name")); ?>
-                    </div>
-
-                    <div class="col-xs-6">
-                        <?php echo form_label('address', 'address', $attributes = array()); ?>
+                        <?php echo form_label('Address', 'address', $attributes = array()); ?>
                         <?php echo form_input('address', set_value('address'), $attributes = array('class' => "form-control", "id" => "address")); ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6">
-                        <?php echo form_label('gender', 'gender', $attributes = array()); ?>
-                        ,<select name="gender" id="gender" class="form-control">
+                        <?php echo form_label('Gender', 'gender', $attributes = array()); ?><span class="color-red" >*</span>
+                        <select name="gender" id="gender" class="form-control">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
@@ -122,14 +120,17 @@
                         <?php echo form_label('Birthday', 'birthday', $attributes = array()); ?>
                         <input type="date" name="birthday" id="birthday" class="form-control">
                     </div>
+                    
                     <div class="col-xs-6">
-                        <?php echo form_label('Email', 'email', $attributes = array()); ?>
-                        <?php echo form_input('email', set_value('email'), $attributes = array('class' => "form-control", "id" => "email")); ?>
+                        <?php echo form_label('Mobile Phone', 'mobile_phone', $attributes = array()); ?>
+                        <?php echo form_input('mobile_phone', set_value('mobile_phone'), $attributes = array('class' => "form-control", "id" => "mobile_phone")); ?>
                     </div>
+
                     <div class="col-xs-6">
-                        <?php echo form_label('Mobile Phone', 'mobile', $attributes = array()); ?>
-                        <?php echo form_input('mobile', set_value('mobile'), $attributes = array('class' => "form-control", "id" => "mobile")); ?>
+                        <?php echo form_label('Email', 'email', $attributes = array()); ?><span class="color-red" >*</span>
+                        <?php echo form_input('email', set_value('email'),  $attributes = array('class' => "form-control", "id" => "email")); ?>
                     </div>
+                    
                 </div>
                 <div class="row">
                     <div class="col-xs-6">
@@ -148,29 +149,31 @@
     </div><!-- /.modal -->
 </div>
 
-
-
-
-<div class="modal fade" role="dialog" id="ViewCustomerModal">
+<div class="modal fade" role="dialog" id="ViewEmployeeModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Employee</h4>
             </div>
+            
             <div class="row">
-                <div class="col-md-6 img">
+                <div class="col-md-4 img">
                     <img src="<?php echo base_url();?>" id='image' width="100%" style="padding: 10px;" alt="" class="img-rounded">
                 </div>
                 <div class="col-md-6 details">
-                    <blockquote>
+                    <!-- <blockquote>
                         <h5 id="name"></h5>
                         <small><cite title="Source Title" id='address'><i class="icon-map-marker"></i></cite></small>
                         <small id="birthday"> </small>
-                    </blockquote>
-                    <p id='gender'></p>
-                    <p id="email"></p>
-                    <p id="mobile"></p>
+                    </blockquote> -->
+                   
+                    <h5 id="name"></h5>
+                    <h5 id="address"></h5>
+                    <h5 id="birthday"> </h5>
+                    <h5 id="gender"></h5>
+                    <h5 id="email"></h5>
+                    <h5 id="mobile"></h5>
                 </div>
             </div>
         </div><!-- /.modal-content -->

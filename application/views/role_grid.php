@@ -65,13 +65,13 @@
                     <div class="col-xs-6">
                         <div class="form-group">
                             <?php echo form_label('Role Name', 'RoleName', $attributes = array()); ?>
-                            <?php echo form_input('RoleName', set_value('name'), $attributes = array('class' => "form-control", "id" => "name")); ?>
+                            <?php echo form_input('name', set_value('name'), $attributes = array('class' => "form-control", "id" => "name")); ?>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
                             <?php echo form_label('Display name', 'DisplayName', $attributes = array()); ?>
-                            <?php echo form_input('DisplayName', set_value('display_name'), $attributes = array('class' => "form-control", "id" => "display_name")); ?>
+                            <?php echo form_input('display_name', set_value('display_name'), $attributes = array('class' => "form-control", "id" => "display_name")); ?>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <?php echo form_label('Description', 'Description', $attributes = array()); ?>
-                        <?php echo form_input('Description', set_value('description'), $attributes = array('class' => "form-control", "id" => "description")); ?>
+                        <?php echo form_input('description', set_value('description'), $attributes = array('class' => "form-control", "id" => "description")); ?>
                     </div>
                 </div>
                 <div class="row">

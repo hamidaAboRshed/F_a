@@ -182,16 +182,17 @@ class User extends CI_Controller {
         echo json_encode($roles);
     }
 
-    public function update_user_roles() {
+    public function update_user_roles() 
+    {
         $this->load->model('Role_model');
         $roles= $this->Role_model->all();
         $user_id = $this->input->post('user_id');
         $user_roles = array();
         foreach($roles as $key=>$value)
         {
-          if($this->input->post($value->id))
+          if($this->input->post($value->ID))
           {
-              $user_roles[$key]['role_id'] = $this->input->post($value->id);
+              $user_roles[$key]['role_id'] = $this->input->post($value->ID);
               $user_roles[$key]['user_id'] =$user_id;
           }
         }

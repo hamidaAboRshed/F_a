@@ -81,7 +81,7 @@ function EditEmployee(id)
             $('#EditEmployee #last_name').val(response['LastName']);
             $('#EditEmployee #father_name').val(response['FatherName']);
             $('#EditEmployee #email').val(response['Email']);
-            $('#EditEmployee #mobile').val(response['mobile']);
+            $('#EditEmployee #mobile_phone').val(response['MobilePhone']);
             $('#EditEmployee #gender').val(response['Gender']);
             $('#EditEmployee #birthday').val(response['DateOfBirthday']);
             $('#EditEmployee #address').val(response['Address']);

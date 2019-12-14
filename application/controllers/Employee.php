@@ -8,7 +8,6 @@ class Employee extends CI_Controller {
 			parent::__construct();
 	
 		$this->load->database();
-		$this->load->helper('url');
 		$this->load->model('Employee_model');
 	}
 
@@ -20,7 +19,7 @@ class Employee extends CI_Controller {
 			'First name',
 			'Last name',
 			'Mobile Phone',
-			'Email ',
+			'Email',
 			'Options'
 		);
 
@@ -82,44 +81,40 @@ class Employee extends CI_Controller {
 			array(
 				'field' => "first_name",
 				'label' => "First name",
-				'rules' => "required|trim",
-				'errors' => array(
-					'required' => 'First name required'
-				)
+				'rules' => "required|trim"
 			),
 			array(
 				'field' => "last_name",
 				'label' => "Last name",
-				'rules' => "required|trim",
-				'errors' => array(
-					'required' => 'Last name required'
-				)
+				'rules' => "required|trim"
+			),
+			array(
+				'field' => "gender",
+				'label' => "Gender",
+				'rules' => "required|trim"
 			),
 			array(
 				'field' => "email",
 				'label' => "email",
-				'rules' => "required|trim|valid_email",
-				'errors' => array(
-					'required' => 'Email required',
-					'valid_email' => "You have to enter valid email"
-				)
+				'rules' => "required|trim|valid_email"
 			)
-
 		);
 
 		$this->form_validation->set_rules($rules);
-		$validatore = array('success' => false, 'messages' => '');
+		$validatore = array('success' => false, 'messages' => array());
+		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
 		if ($this->form_validation->run() == false) {
 			$validatore['success'] = false;
-			$validatore['messages'] = validation_errors();
+			foreach ($_POST as $key => $value) {
+				$validatore['messages'][$key] = form_error($key);
+			}
 		} else {
 			
 			$employee = array(
 				'FirstName' => $this->input->post('first_name'),
 				'LastName' => $this->input->post('last_name'),
-				'FatherName' => $this->input->post('father_name'),
+				'MobilePhone' => $this->input->post('mobile_phone'),
 				'Email' => $this->input->post('email'),
-				'MobilePhone' => $this->input->post('mobile'),
 				'DateOfBirth' => $this->input->post('birthday'),
 				'Gender' => $this->input->post('gender'),
 				'Address' => $this->input->post('address')
@@ -137,47 +132,44 @@ class Employee extends CI_Controller {
 			array(
 				'field' => "first_name",
 				'label' => "First name",
-				'rules' => "required|trim",
-				'errors' => array(
-					'required' => 'First name required'
-				)
+				'rules' => "required|trim"
 			),
 			array(
 				'field' => "last_name",
 				'label' => "Last name",
-				'rules' => "required|trim",
-				'errors' => array(
-					'required' => 'Last name required'
-				)
+				'rules' => "required|trim"
 			),
+			array(
+					'field' => "gender",
+					'label' => "Gender",
+					'rules' => "required|trim"
+					),
 			array(
 				'field' => "email",
 				'label' => "email",
-				'rules' => "required|trim|valid_email",
-				'errors' => array(
-					'required' => 'Email required',
-					'valid_email' => "You have to enter valid email"
-				)
-			)
-
+				'rules' => "required|trim|valid_email"
+				),
 		);
 
 		$this->form_validation->set_rules($rules);
-		$validatore = array('success' => false, 'messages' => '');
+		$validatore = array('success' => false, 'messages' => array());
+		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
 		if ($this->form_validation->run() == false) {
 			$validatore['success'] = false;
-			$validatore['messages'] = validation_errors();
+			foreach ($_POST as $key => $value) {
+				$validatore['messages'][$key] = form_error($key);
+			}
 		} else {
+		
 			$image=null;
 			$employee = array(
 				'FirstName' => $this->input->post('first_name'),
 				'LastName' => $this->input->post('last_name'),
-				'FatherName' => $this->input->post('father_name'),
+				'MobilePhone' => $this->input->post('mobile_phone'),
 				'Email' => $this->input->post('email'),
-				'MobilePhone' => $this->input->post('mobile'),
 				'DateOfBirth' => $this->input->post('birthday'),
 				'Gender' => $this->input->post('gender'),
-				'Address' => $this->input->post('address'),
+				'Address' => $this->input->post('address')
 			);
 			if($image!=null)
 			{
@@ -185,7 +177,7 @@ class Employee extends CI_Controller {
 			}
 			$this->Employee_model->update_employee($employee);
 			$validatore['success']=true;
-			$validatore['messages']="Employee added successfully";
+			$validatore['messages']="Employee updated successfully";
 		}
 		echo json_encode($validatore);
 	}

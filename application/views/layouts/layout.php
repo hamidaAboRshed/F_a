@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <?php $this->load->view('includes/header');?>
 <body>
-    <!--<script src="https://code.jquery.com/jquery-3.4.0.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
     <script src="<?php echo base_url();?>/assets/js/javaScript/jquery-3.4.1.min.js"></script>
     <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>

@@ -69,7 +69,7 @@ function addRoleModal() {
 
 function update_role_modal(id) {
     $.ajax({
-        url: "../Role/get_role?id="+id,
+        url: "./Role/get_role?id="+id,
         type: "get",
         dataType: 'json',
         success: function (response) {

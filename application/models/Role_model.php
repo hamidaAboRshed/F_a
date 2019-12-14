@@ -205,7 +205,7 @@ class Role_model extends CI_Model
     public function update_role($data)
     {
         $id = $data['id'];
-        $this->db->where(['id'=>$id]);
+        $this->db->where(['id'=>$ID]);
         $this->db->update('role',$data);
     }
 

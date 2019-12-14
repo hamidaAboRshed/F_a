@@ -70,7 +70,7 @@ function change_status(id) {
 
     var data = "";
     $.ajax({
-        url: "./change_status?id="+id,
+        url: "./User/change_status?id="+id,
         type: "get",
         data: data,
         processData: false,

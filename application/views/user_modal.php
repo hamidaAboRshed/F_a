@@ -12,13 +12,13 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label('Password', 'password', $attributes = array()); ?>
+                            <?php echo form_label('Password', 'password', $attributes = array()); ?><span class="color-red" >*</span>
                             <?php echo form_input('password', set_value('password'), $attributes = array('class' => "form-control", "id" => "password")); ?>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label('Re-type password', 'password_confirmation', $attributes = array()); ?>
+                            <?php echo form_label('Re-type password', 'password_confirmation', $attributes = array()); ?><span class="color-red" >*</span>
                             <?php echo form_input('password_confirmation', set_value('password_confirmation'), $attributes = array('class' => "form-control", "id" => "password_confirmation")); ?>
                         </div>
                     </div>
@@ -33,8 +33,6 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
-
-
 
 <div class="modal fade" role="dialog" id="UserUpdateRolesModal">
     <div class="modal-dialog" role="document">
@@ -57,8 +55,8 @@
                 <?php foreach ($Roles as $role){?>
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <?php echo form_label($role->name, 'role'.$role->id, $attributes = array()); ?>
-                            <input type="checkbox" name=<?php echo $role->id?> value=<?php echo $role->id?> id=<?php echo$role->id?>>
+                            <?php echo form_label($role->name, 'role'.$role->ID, $attributes = array()); ?>
+                            <input type="checkbox" name=<?php echo $role->ID?> value=<?php echo $role->ID?> id=<?php echo$role->ID?>>
                         </div>
                     </div>
                     <?php }?>

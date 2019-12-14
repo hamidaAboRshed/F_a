@@ -78,14 +78,7 @@
                
             </li>
             
-            <li class="menu-title">Extras</li><!-- /.menu-title -->
-            <li class="menu-item-has-children dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
-                <ul class="sub-menu children dropdown-menu">
-                    <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo site_url('User/login');?>">Login</a></li>
-                    <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
-                </ul>
-            </li>
+       
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav> 
