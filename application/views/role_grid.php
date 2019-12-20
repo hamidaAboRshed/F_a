@@ -1,4 +1,3 @@
-
 <div class="modal fade" role="dialog" id="addRoleModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

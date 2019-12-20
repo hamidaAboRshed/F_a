@@ -51,7 +51,7 @@ class Employee extends CI_Controller {
 				<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <button class="dropdown-item" type="button" onclick="EditEmployee('.$value['ID'].')" data-toggle="modal" data-target="#EditEmployeeModal">Edit</button>
                   <button class="dropdown-item" type="button" onclick="ViewEmployee('.$value['ID'].')" data-toggle="modal" data-target="#ViewEmployeeModal">View</button>
-                  <button class="dropdown-item" type="button" href="./User/create_user/'.$value['ID'].'" >Create account</button>
+                  <a class="dropdown-item" type="button" href="./User/create_user/'.$value['ID'].'" >Create account</a>
                   </button>
                   </div>
               </div> 

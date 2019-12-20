@@ -6,12 +6,15 @@
 <?php $this->load->view('includes/header');?>
 <body>
     <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-    <script src="<?php echo base_url();?>/assets/js/javaScript/jquery-3.4.1.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/javaScript/jquery-3.4.1.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/lib/bootstrap/js/popper.min.js"></script>
+    
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
     <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="<?php echo base_url()?>assets/js/javaScript/jquery.matchHeight.min.js"></script>
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">

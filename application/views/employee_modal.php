@@ -26,8 +26,10 @@
 
                 <div class="row">
                       &nbsp;&nbsp;&nbsp;&nbsp;<div class="col-xs-6">
+                      <div class="form-group">
                         <?php echo form_label('Address', 'address', $attributes = array()); ?>
                         <?php echo form_input('address', set_value('address'), $attributes = array('class' => "form-control", "id" => "address")); ?>
+                        </div>
                     </div>
                 </div>&nbsp;&nbsp;&nbsp;
 
@@ -48,9 +50,11 @@
 
                 <div class="row">
                 &nbsp;&nbsp;&nbsp;&nbsp;<div class="col-xs-6">
+                    <div class="form-group">
                         <?php echo form_label('Email', 'email', $attributes = array()); ?><span class="color-red" >*</span>
                         <?php echo form_input('email', set_value('email'), $attributes = array('class' => "form-control", "id" => "email")); ?>
                     </div>&nbsp;&nbsp;&nbsp;
+                    </div>
                     <div class="col-xs-6">
                         <?php echo form_label('Mobile Phone', 'mobile_phone', $attributes = array()); ?>
                         <?php echo form_input('mobile_phone', set_value('mobile_phone'), $attributes = array('class' => "form-control", "id" => "mobile_phone")); ?>

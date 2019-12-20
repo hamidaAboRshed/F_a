@@ -69,7 +69,7 @@ function addRoleModal() {
 
 function update_role_modal(id) {
     $.ajax({
-        url: "./Role/get_role?id="+id,
+        url: "./Role/get_role?role_id="+id,
         type: "get",
         dataType: 'json',
         success: function (response) {
@@ -83,7 +83,7 @@ function update_role_modal(id) {
             }
             else 
             {
-                $("#editRoleModal")[0].reset();
+                $("#editRoleForm")[0].reset();
                 $("#editRoleModal").hide();
             }
             
@@ -153,15 +153,12 @@ function update_role_modal(id) {
     });
 }
 
-
-
-
 function  update_role_permissions(id) {
 
     $('#RolePermissionsForm').trigger('reset');
     $('#RoleUpdatePermissionModal #role_id').val(id);
     $.ajax({
-        url: "../Role/get_role_permissions?role_id="+id,
+        url: "./Role/get_role_permissions?role_id="+id,
         type: "get",
         processData: false,
         contentType: false,
@@ -175,10 +172,9 @@ function  update_role_permissions(id) {
         }
     });
 
- 
     $('.form-group').removeClass('has-error').removeClass('has-success');
     $('.text-danger').remove();
-    $('.modal-title').html('Role permissions');;
+    $('.modal-title').html('Role permissions');
     $('#RolePermissionsForm  #user_id').val(id);
     $("#RolePermissionsForm").unbind('submit').bind('submit', function () {
         var form = $(this);
@@ -239,10 +235,6 @@ function  update_role_permissions(id) {
         return false;
         
     });
-
-    
-    
-
 }
 
 

@@ -129,10 +129,10 @@ class User extends CI_Controller {
 
     public function reset_password() 
     {
-        if (!can(['user_view'])) {
-			$this->session->set_userdata('error', 'you dont have permission to do that');
-			redirect('Welcome/index');
-		}
+        // if (!can(['user_view'])) {
+		// 	$this->session->set_userdata('error', 'you dont have permission to do that');
+		// 	redirect('Welcome/index');
+		// }
         $rules = array(
             array(
                 'field'=>"password",
@@ -151,13 +151,14 @@ class User extends CI_Controller {
             )
         );
         $this->load->library('form_validation');
-        $validator = array("success"=>false,"message"=>"");
+        $validator = array("success"=>false,"message"=>array());
         $this->form_validation->set_rules($rules);
         if($this->form_validation->run()==FALSE)
         {
-            $validator['messages']="Error validation";
             $validator['success']=false;
-            echo validation_errors();
+			foreach ($_POST as $key => $value) {
+				$validator['messages'][$key] = form_error($key);
+			}
         }
         else  {
             $this->User_model->reset_password();

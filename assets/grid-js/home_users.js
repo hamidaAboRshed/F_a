@@ -123,12 +123,11 @@ function change_status(id) {
 
 }
 
-
 function  update_user_roles(id) {
 
     $('#UserUpdateRolesModal #user_id').val(id);
     $.ajax({
-        url: "../User/get_user_roles?id="+id,
+        url: "./User/get_user_roles?id="+id,
         type: "get",
         processData: false,
         contentType: false,
@@ -142,7 +141,6 @@ function  update_user_roles(id) {
         }
     });
 
- 
     $('.form-group').removeClass('has-error').removeClass('has-success');
     $('.text-danger').remove();
     $('.modal-title').html('User Roles');;

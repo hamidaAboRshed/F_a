@@ -186,13 +186,13 @@ class Role_model extends CI_Model
 
     public function get_role($id)
     {
-        $Role = $this->db->get_where('role',array('ID'=>$id))->row(0);
+        $Role = $this->db->get_where('role',array('id'=>$id))->row(0);
         return $Role;
     }
 
     public function get_role_array($id)
     {
-        $Role = $this->db->get_where('role',array('ID'=>$id));
+        $Role = $this->db->get_where('role',array('id'=>$id));
         return $Role;
     }
 
@@ -205,7 +205,7 @@ class Role_model extends CI_Model
     public function update_role($data)
     {
         $id = $data['id'];
-        $this->db->where(['id'=>$ID]);
+        $this->db->where(['id'=>$id]);
         $this->db->update('role',$data);
     }
 

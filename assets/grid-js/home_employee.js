@@ -65,7 +65,6 @@ function addEmployee()
     });
 }
 
-
 function EditEmployee(id)
 {
         
@@ -129,7 +128,6 @@ function EditEmployee(id)
                                 .removeClass('has-success')
                                 .addClass(value.length > 0 ? 'has-error' : 'has-success')
                                 .after(value);
-    
                         });
                       
                     } else {

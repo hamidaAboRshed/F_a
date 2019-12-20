@@ -63,8 +63,6 @@ class Role extends CI_Controller
   </div>
 </div> 
 			';
-
-
             $result['data'][$key] = array(
                 $value['name'],
                 $value['display_name'],
@@ -84,7 +82,7 @@ class Role extends CI_Controller
             array(
                 'field' => 'RoleName',
                 'label' => 'RoleName',
-                'rules' => 'required'
+                'rules' => 'required|trim'
             ),
             array(
                 'field' => 'status',
@@ -118,7 +116,7 @@ class Role extends CI_Controller
 
     public function get_role()
     {
-        $id = $this->input->get('id');
+        $id = $this->input->get('role_id');
         $role = $this->Role_model->get_role_array($id);
         echo json_encode($role->result_array());
     }
@@ -127,7 +125,7 @@ class Role extends CI_Controller
     {
         $rules = array(
             array(
-                'field' => 'RoleName',
+                'field' => 'name',
                 'label' => 'RoleName',
                 'rules' => 'required'
             ),
@@ -138,19 +136,23 @@ class Role extends CI_Controller
                 'rules' => 'required'
             ),
         );
-        $validator = array('success' => true, 'messages' => array());
         $this->form_validation->set_rules($rules);
+        $validator = array('success' => true, 'messages' => array());
+        $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
         if($this->form_validation->run()==FALSE)
         {
-            $validator['messages']="Error not valid";
+            foreach ($_POST as $key => $value) {
+				$validator['messages'][$key] = form_error($key);
+            
             $validator['success']=false;
-        }
+        }}
+        
         else 
         {
             $data = array(
-                "RoleName"=>$this->input->post('name'),
-                "DisplayName"=>$this->input->post('display_name'),
-                "Description"=>$this->input->post('description'),
+                "name"=>$this->input->post('RoleName'),
+                "display_name"=>$this->input->post('DisplayName'),
+                "description"=>$this->input->post('Description'),
                 "status"=>$this->input->post('status'),
                 "created_at"=>date('Y-m-d H:i:s'),
                 "id"=>$this->input->post("id")
@@ -190,9 +192,8 @@ class Role extends CI_Controller
           
             if($this->input->post($value->ID))
             {
-                
                 $role_permissions[$key]['role_id']=$role_id;
-                $role_permissions[$key]['permission_id']=$this->input->post($value->id);
+                $role_permissions[$key]['permission_id']=$this->input->post($value->ID);
             }
         }
         $this->Role_model->update_role_permissions($role_permissions,$role_id);

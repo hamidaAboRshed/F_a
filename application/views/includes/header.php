@@ -10,6 +10,9 @@
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="<?php echo base_url();?>/assets/images/logo/favicon.png">
 
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/normalize.min.css">
+    
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
     <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/css/bootstrap-reboot.min.css">
@@ -31,7 +34,7 @@
     <link href="<?php echo base_url()?>assets/css/fullcalendar.min.css" rel="stylesheet" />
 
     <!-- dataTable -->
-  <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/datatables.min.css"></link>-->
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/datatables.min.css"></link> -->
    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.bootstrap.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.bootstrap4.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.dataTables.min.css"></link>
@@ -39,11 +42,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.foundation.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.semanticui.min.css"></link>
 
- 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/datatables.min.css"></link>
-
-
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
   
