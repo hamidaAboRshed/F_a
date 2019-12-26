@@ -1,4 +1,6 @@
-<div class="modal fade" role="dialog" id="AddRegulationModal">
+
+            
+            <div class="modal fade" role="dialog" id="AddRegulationModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -30,6 +32,23 @@
                     </div>
 
                     <div class="col-xs-6">
+                        <?php echo form_label('QM', 'qm', $attributes = array()); ?>
+                        <?php echo form_input('qm', set_value('qm'), $attributes = array('class' => "form-control", "id" => "qm")); ?>
+                    </div>
+                    <div class="col-xs-6">
+                        <?php echo form_label('GCTS', 'gcts', $attributes = array()); ?>
+                        <?php echo form_input('gcts', set_value('gcts'), $attributes = array('class' => "form-control", "id" => "gcts")); ?>
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        <?php echo form_label('IECEE', 'iecee', $attributes = array()); ?>
+                        <?php echo form_input('iecee', set_value('iecee'), $attributes = array('class' => "form-control", "id" => "iecee")); ?>
+                    </div>
+                    <div class="col-xs-6">
+                        <?php echo form_label('PLASTIC', 'plastic', $attributes = array()); ?>
+                        <?php echo form_input('plastic', set_value('plastic'), $attributes = array('class' => "form-control", "id" => "plastic")); ?>
+                    </div>
+                    <div class="col-xs-6">
                         <?php echo form_label('Scheme', 'scheme', $attributes = array()); ?>
                         <?php echo form_input('scheme', set_value('scheme'), $attributes = array('class' => "form-control", "id" => "scheme")); ?>
                     </div>
@@ -42,38 +61,35 @@
     </div><!-- /.modal -->
 </div>
 
+<div class="onoffswitch3">
+    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+    <label class="onoffswitch3-label" for="myonoffswitch3">
+        <span class="onoffswitch3-inner">
+            <span class="onoffswitch3-active"><span class="onoffswitch3-switch">Active</span></span>
+            <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">Inactive</span></span>
+        </span>
+    </label>
+</div>
 
-<div class="modal fade" role="dialog" id="ViewEmployeeModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Employee</h4>
-            </div>
-            <div class="row">
-                <div class="col-md-6 img">
-                    <img src="<?php echo base_url();?>" id='image' width="100%" style="padding: 10px;" alt="" class="img-rounded">
-                </div>
-                <div class="col-md-6 details">
-                    <blockquote>
-                        <h5 id="name"></h5>
-                        <small><cite title="Source Title" id='address'><i class="icon-map-marker"></i></cite></small>
-                        <small id="birthday"> </small>
-                    </blockquote>
-                    <p id='gender'></p>
-                    <p id="email"></p>
-                    <p id="mobile"></p>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<!-- Material switch -->
+<div class="onoffswitch3-switch">
+  <label>
+    Off
+    <input type="checkbox">
+    <span class="lever"></span> On
+  </label>
+</div>
+
 <script src="<?php echo base_url()?>assets/grid-js/home_employee.js"></script>
 <?php //if(can(['employee_add'])){?>
 <script type="text/javascript">
-  
-//   $(document).ready(function() {
-//       $('#button-action').append('<a class="btn btn-default pull pull-right" data-toggle="modal" data-target="#AddEmployeeModal" onclick="addEmployee()">Add </a>');
- // });
+
+  $(document).ready(function() {
+    $('#button-action').append('<a class="onoffswitch3-switch" data-target="#AddEmployeeModal" onclick="get_products()"Language<a/>');
+ 
+    //   $('#button-action').append('<a class="onoffswitch3-checkbox" data-toggle="modal" data-target="#AddEmployeeModal" onclick="get_products()">Language</a>');
+ });
 </script>
+
 <?php //}?>
+

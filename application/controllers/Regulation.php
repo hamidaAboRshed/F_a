@@ -18,14 +18,17 @@ class Regulation extends CI_Controller{
             $data['output'] = '';
             $array = array();
             $array['grid_header'] = array(
-                'Hs_code',
-                'Technical_regulation',
-                'Category_name',
+                'Hs Code',
+                'Technical Regulation',
+                'Category Name',
+                'QM',
+                'GCTS',
+                'IECEE',
+                'Plastic',
                 'Schema'
-               // 'qm'
             );
     
-            $array['read_action'] = './Regulation/fetchRegulationsData/';
+            $array['read_action'] = './Regulation/fetchRegulationsData/1';
             $array['custom_modal_file'] = 'regulation_modal.php';
             $array['custom_modal_data'] = $data;
     
@@ -36,12 +39,21 @@ class Regulation extends CI_Controller{
             $this->load->view('layouts/layout', $data);
         }
     
-        function fetchRegulationsData()
-        {
+       
+        function fetchRegulationsData($language)
+        {   
             $result = array('data' => array());
     
-            $data = $this->Regulation_model->get_products();
-    
+         //  $data = $this->Regulation_model->get_products();
+
+            if($language==1)
+            {
+              $data = $this->Regulation_model->get_products_En();
+            }
+            else{
+                $data = $this->Regulation_model->get_products_Ar();
+            }
+
             foreach ($data as $key => $value) {
                 // button
                 $buttons = '
@@ -67,10 +79,17 @@ class Regulation extends CI_Controller{
                     </ul>
                     </div>
                     ';
+                   
                 $result['data'][$key] = array(
                     $value['hs_code'],
-                    $value['technical_regulation_ar'],
-                    $value['category_name_ar'],
+                    '<span class = "reg_p">'.$value['technical_regulation'].'</span>',
+                    $value['category_name'],
+                    $value['qm']  == 1 ? '<img src="'.base_url("assets/images/logo/check.png").'" id="image" width="100%" style="padding: 10px;" alt="" class="img-rounded">':'<img src="'.base_url("assets/images/logo/un-check.png").'" id="image" width="100%" style="padding: 10px;" alt="" class="img-rounded">',
+                                   
+                   
+                    $value['gcts'],
+                    $value['iecee'],
+                    $value['plastic'],
                     $value['scheme']
                    // $buttons
                 );
@@ -84,8 +103,5 @@ class Regulation extends CI_Controller{
             $product['Photo']= '';
             echo json_encode($product);
         }
-    
        
-    
-       
-    }
+}

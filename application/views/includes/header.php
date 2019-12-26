@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/icons/flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-<!-- 
+
      <script type="text/javascript" src="<?php echo base_url()?>assets/js/javaScript/html5shiv.min.js"></script> 
      
-     <script type="text/javascript" src="<?php echo base_url()?>assets/DataTables/Buttons-1.6.1/js/datatables.min.js"></script>  -->
+     <script type="text/javascript" src="<?php echo base_url()?>assets/DataTables/Buttons-1.6.1/js/datatables.min.js"></script> 
 
     <link href="<?php echo base_url()?>assets/css/chartist.min.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/jqvmap.min.css" rel="stylesheet">
@@ -41,13 +41,20 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.jqueryui.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.foundation.min.css"></link>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/buttons.semanticui.min.css"></link>
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/DataTables/Buttons-1.6.1/css/datatables.min.css"></link>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
   
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></link> -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css"> -->
+
+    <!-- <link href="<?php echo base_url()?>assets/js/bootstrap-checkbox.js" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/js/ bootstrap-checkbox.min.js" rel="stylesheet"> -->
+
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
 
 
+   
    <style>
     #weatherWidget .currentDesc {
         color: #ffffff!important;

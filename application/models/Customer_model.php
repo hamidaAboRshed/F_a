@@ -10,10 +10,10 @@ class Customer_model extends CI_Model {
 		return $this->db->get()->result_array();
 	}
 
-	// function insert($costumer)
-	// {
-	// 	$this->db->insert('customer',$customer);
-	// }
+	function insert($customer)
+	{
+		$this->db->insert('customer',$customer);
+	}
 
 	function get_customer($id)
 	{
@@ -31,9 +31,9 @@ class Customer_model extends CI_Model {
 		return $query->result();
 	}
 
-    function update($data)
+    function update($data,$customer_id)
     {
-    	$this->db->where('ID', get_cookie('emp_id'));
+    	$this->db->where('ID', $customer_id);
     	$this->db->update('customer', $data);
 	}
 	

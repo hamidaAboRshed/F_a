@@ -1448,6 +1448,7 @@ header .form-inline {
     border: none;
     border-bottom: 1px solid #e8e9ef;
     color: #868e96;
+    width:100%;
     font-size: 12px;
     font-weight: normal;
     padding: .75em 1.25em;
@@ -2512,3 +2513,12 @@ footer.site-footer {
     right: 20px !important; }
 /*# sourceMappingURL=style.css.map */
 
+.table#header
+{
+    width: 100% !important;
+}
+ .reg_p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

@@ -5,7 +5,12 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <?php $this->load->view('includes/header');?>
 <body>
-    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script> -->
+
+
     <script src="<?php echo base_url();?>assets/js/javaScript/jquery-3.4.1.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
@@ -16,6 +21,11 @@
     <script src="<?php echo base_url()?>assets/bootstrap-4.4.0-dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="<?php echo base_url()?>assets/js/javaScript/jquery.matchHeight.min.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <?php $this->load->view('includes/left_panel');?>

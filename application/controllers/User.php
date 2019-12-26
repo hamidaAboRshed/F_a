@@ -151,13 +151,15 @@ class User extends CI_Controller {
             )
         );
         $this->load->library('form_validation');
-        $validator = array("success"=>false,"message"=>array());
         $this->form_validation->set_rules($rules);
+        $validator = array("success"=>false,"message"=>array());
+        $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
         if($this->form_validation->run()==FALSE)
         {
-            $validator['success']=false;
 			foreach ($_POST as $key => $value) {
-				$validator['messages'][$key] = form_error($key);
+                $validator['messages'][$key] = form_error($key);
+                
+                $validator['success']=false;
 			}
         }
         else  {

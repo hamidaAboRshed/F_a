@@ -7,6 +7,7 @@ class Employee_model extends CI_Model {
 	{
 		$this->db->select('employee.id as employee_id,employee.*');
 		$this->db->from('employee');
+		$this->db->order_by("ID", "desc");
 		return $this->db->get()->result_array();
 	}
 
@@ -17,7 +18,9 @@ class Employee_model extends CI_Model {
 
 	function get_employee($id)
 	{
+		
 		return $this->db->get_where('employee',['id'=>$id])->row_array();
+		
 	}
 
 	function update_employee($employee)

@@ -73,6 +73,7 @@ class Employee extends CI_Controller {
 		$employee = $this->Employee_model->get_employee($id);
 		$employee['Photo']= '';
 		echo json_encode($employee);
+		
 	}
 
 	function add_employee()
@@ -99,11 +100,12 @@ class Employee extends CI_Controller {
 				'rules' => "required|trim|valid_email"
 			)
 		);
-
+		
 		$this->form_validation->set_rules($rules);
 		$validatore = array('success' => false, 'messages' => array());
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-		if ($this->form_validation->run() == false) {
+		if ($this->form_validation->run() == false) 
+		{
 			$validatore['success'] = false;
 			foreach ($_POST as $key => $value) {
 				$validatore['messages'][$key] = form_error($key);
@@ -154,7 +156,8 @@ class Employee extends CI_Controller {
 		$this->form_validation->set_rules($rules);
 		$validatore = array('success' => false, 'messages' => array());
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-		if ($this->form_validation->run() == false) {
+		if ($this->form_validation->run() == false)
+		 {
 			$validatore['success'] = false;
 			foreach ($_POST as $key => $value) {
 				$validatore['messages'][$key] = form_error($key);

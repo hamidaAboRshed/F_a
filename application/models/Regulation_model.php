@@ -2,10 +2,22 @@
 
 class Regulation_model extends CI_Model {
 
-	
-	function get_products()
+	// function get_products()
+	// {
+	// 	$this->db->select('product.ID as product_ID,product.*');
+	// 	$this->db->from('product');
+	// 	return $this->db->get()->result_array();
+	// }
+	function get_products_Ar()
 	{
-		$this->db->select('product.ID as product_ID,product.*');
+		$this->db->select('product.ID as product_ID, product.technical_regulation_ar as technical_regulation, product.category_name_ar as category_name, product.*');
+		$this->db->from('product');
+		return $this->db->get()->result_array();
+	}
+
+	function get_products_En()
+	{
+		$this->db->select('product.ID as product_ID, product.technical_regulation_en as technical_regulation, product.category_name_en as category_name, product.*');
 		$this->db->from('product');
 		return $this->db->get()->result_array();
 	}
@@ -33,8 +45,6 @@ class Regulation_model extends CI_Model {
 		$query=$this->db->get();
 		return $query->result();
 	}
-
-
 
     function update($data)
     {

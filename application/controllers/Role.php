@@ -85,19 +85,23 @@ class Role extends CI_Controller
                 'rules' => 'required|trim'
             ),
             array(
-                'field' => 'status',
-                'label' => 'Status',
-                'rules' => 'required'
+                'field' => 'DisplayName',
+                'label' => 'DisplayName',
+                'rules' => 'required|trim'
             ),
 
         );
-        $validator = array('success' => TRUE, 'messages' => array());
+       
         $this->form_validation->set_rules($rules);
-        if($this->form_validation->run()==FALSE)
+        $validatore = array("success"=>false,"message"=>array());
+        $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+        if($this->form_validation->run()==false)
         {
-            $validator['messages']="Error not validate";
-            $validator['success']=false;
-        }
+            $validatore['success']=false;
+            foreach ($_POST as $key => $value) {
+				$validatore['message'][$key] = form_error($key);
+               
+        }}
         else {
             $data = array(
                 "name"=>$this->input->post('RoleName'),
@@ -107,11 +111,12 @@ class Role extends CI_Controller
                 "created_at"=>date('Y-m-d H:i:s')
             );
             $this->Role_model->insert_role($data);
-            $validator['messages']="Roled added successfully";
-            $validator['success']=TRUE;
+            $validatore['success']=true;
+            $validatore['message']="Role added successfully";
+            
         }
        
-        echo json_encode($validator);
+        echo json_encode($validatore);
     }
 
     public function get_role()
@@ -131,20 +136,21 @@ class Role extends CI_Controller
             ),
 
             array(
-                'field' => 'status',
-                'label' => 'Status',
+                'field' => 'display_name',
+                'label' => 'DisplayName',
                 'rules' => 'required'
             ),
         );
+        $this->load->library('form_validation');
         $this->form_validation->set_rules($rules);
-        $validator = array('success' => true, 'messages' => array());
+        $validatore = array('success' =>false, 'messages' => array());
         $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
-        if($this->form_validation->run()==FALSE)
+        if($this->form_validation->run()==false)
         {
+            $validatore['success']=false;
             foreach ($_POST as $key => $value) {
-				$validator['messages'][$key] = form_error($key);
+				$validatore['messages'][$key] = form_error($key);
             
-            $validator['success']=false;
         }}
         
         else 
@@ -158,11 +164,12 @@ class Role extends CI_Controller
                 "id"=>$this->input->post("id")
             );
             $this->Role_model->update_role($data);
-            $validator['messages']="Roled updated successfully";
-            $validator['success']=true;
+            $validatore['success']=true;
+            $validatore['messages']="Role updated successfully";
+            
         }
        
-        echo json_encode($validator);
+        echo json_encode($validatore);
     }
 
     public function get_role_permissions()
@@ -197,8 +204,8 @@ class Role extends CI_Controller
             }
         }
         $this->Role_model->update_role_permissions($role_permissions,$role_id);
-        $validator = array('success'=>true,'messages'=>"done");
-        echo json_encode($validator);
+        $validatore = array('success'=>true,'messages'=>"done");
+        echo json_encode($validatore);
     }
     public function get_permissions()
     {

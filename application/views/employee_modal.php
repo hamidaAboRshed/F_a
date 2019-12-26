@@ -59,14 +59,9 @@
                         <?php echo form_label('Mobile Phone', 'mobile_phone', $attributes = array()); ?>
                         <?php echo form_input('mobile_phone', set_value('mobile_phone'), $attributes = array('class' => "form-control", "id" => "mobile_phone")); ?>
                     </div>
-                </div>&nbsp;&nbsp;&nbsp;
-
-                <div class="row">
-                &nbsp;&nbsp;&nbsp;&nbsp; <div class="col-xs-6">
-                        <?php echo form_label('Photo', 'photo', $attributes = array()); ?>
-                        <input type="file" name="photo" class="file" accept='image/png,image/jpeg,image/jpg,image/gif'>
-                    </div>
                 </div>
+
+                
                 <input type="hidden" name="id" id="id">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -136,12 +131,7 @@
                     </div>
                     
                 </div>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <?php echo form_label('Photo', 'photo', $attributes = array()); ?>
-                        <input type="file" name="photo" class="file" accept='image/png,image/jpeg,image/jpg,image/gif'>
-                    </div>
-                </div>
+               
                 <input type="hidden" name="id" id="id">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

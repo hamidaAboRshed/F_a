@@ -53,3 +53,28 @@
 		});	
 	});
 </script>
+
+<script>
+   
+
+  $(document).ready(function() {
+//     $('#').dataTable( {
+//     "autoWidth": false
+// });
+        $('#product').DataTable( {
+            "scrollY": 400,
+            "scrollX": true,
+             "bSort": false,
+             "bPaginate": false,
+			 "autoWidth": false ,
+			 "columnDefs": [
+        { "width": "150px", "targets": [0,1] },       
+        { "width": "40px", "targets": [4] }
+      ]
+    } );
+} );
+    //     } );
+    
+    //     $(".product_wrapper").css("width","100%");
+    // });
+    </script>

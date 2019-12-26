@@ -11,16 +11,17 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-xs-6">
+                        
                         <div class="form-group">
                             <?php echo form_label('Password', 'password', $attributes = array()); ?><span class="color-red" >*</span>
-                            <?php echo form_input('password', set_value('password'), $attributes = array('class' => "form-control", "id" => "password")); ?>
+                           <input type="password", name="password", set_value='password' , class = "form-control", id = "password">
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
                             <?php echo form_label('Re-type password', 'password_confirmation', $attributes = array()); ?><span class="color-red" >*</span>
-                            <?php echo form_input('password_confirmation', set_value('password_confirmation'), $attributes = array('class' => "form-control", "id" => "password_confirmation")); ?>
-                        </div>
+                            <input type="password", name="password_confirmation", set_value='password_confirmation' , class = "form-control", id = "password_confirmation">
+                           </div>
                     </div>
                 </div> 
                 <input type="hidden" id="user_id" name="user_id">
